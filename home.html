@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomePage</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/homepage.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="js/angular.min.js"></script>
+  <link rel="stylesheet" href="css/demoSLideShow.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body ng-app="myApp">
+  <section>
+    <div class="container-fluid p-1 bg-black text-center text-white">
+      <p class="h5 p-1">Tết giảm giá sâu lên đến <span class="badge bg-danger">40%</span> ==> <span
+          class="badge bg-danger">Mua ngay</span></p>
+    </div>
+  </section>
+  <header>
+    <!-- Menu thông tin -->
+    <div class="navbar navbar-expand-md navbar-dark bg-black">
+      <div class="container fontChuMenuTT">
+        <a class="navbar-brand" href="home.html">
+          <img src="Image/logo2.png" alt="Avatar Logo" style="width:100px;" class="rounded-pill">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Home <span
+                  class="badge rounded-pill bg-warning">5</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Cửa hàng</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Sản phẩm</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Nam</a></li>
+                <li><a class="dropdown-item" href="#">Nữ</a></li>
+                <li><a class="dropdown-item" href="#">Trẻ em</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Menu chính -->
+    <div class="class= navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid p-3">
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="container">
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto fontChuMenuChinh">
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Sản phẩm</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="trangSanPham.html">Nike</a></li>
+                  <li><a class="dropdown-item" href="#">MLB</a></li>
+                  <li><a class="dropdown-item" href="#">Adidas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Phụ kiện</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Túi Balo</a></li>
+                  <li><a class="dropdown-item" href="#">Giày</a></li>
+                  <li><a class="dropdown-item" href="#">Nón</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Bộ sưu tập</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Lệ hội</a></li>
+                  <li><a class="dropdown-item" href="#">Công sở</a></li>
+                  <li><a class="dropdown-item" href="#">Thể thao</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Khuyến mãi</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Giảm 60%</a></li>
+                  <li><a class="dropdown-item" href="#">Đồng giá 199k</a></li>
+                  <li><a class="dropdown-item" href="#">Miễn phí ship</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" ng-controller="myCtrl">
+              <input class="form-control me-2" type="text" ng-model="searchSP" placeholder="Search">
+              <button class="btn btn-dark fa fa-search iconMenu iconHover" type="button" data-bs-toggle="modal"
+                data-bs-target="#ModalSearch"></button>
+              <!-- Form tim kiem -->
+              <div class="modal fade boxSearch" id="ModalSearch" tabindex="-1" aria-labelledby="ModalFormLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content rounded-1 boxSearch">
+                    <div class="modal-body d-flex">
+                      <input class="form-control me-2 text-black" type="text" ng-model="searchSP" placeholder="Search">
+                      <button class="btn btn-dark fa fa-search iconMenu iconHover" type="button"
+                        ng-model="check"></button>
+                      <button class="btn btn-dark fa fa-search iconMenu iconHover" type="button"
+                        ng-model="check"></button>
+                    </div>
+                    <div class="danhSachSP d-flex" ng-show="searchSP" ng-repeat="s in dataProducts | filter:searchSP">
+                      <img src="Image/{{s.hinh}}" style="width: 100px; object-fit: cover;" alt="">
+                      <p>{{s.tenSP}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Form tim kiem -->
+              <button class="btn btn-dark fa-solid fa-cart-shopping iconMenu iconHover"
+                onclick="window.location.href='cartShoppingPage.html';"></button>
+              <button class="btn btn-dark fa fa-user iconMenu iconHover" type="button" data-bs-toggle="modal"
+                data-bs-target="#ModalForm"></button>
+              <!-- <span class="badge bg-danger ms-1"> 4</span></button> -->
+              <!-- Form Đăng ký -->
+              <div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                      <div class="myform bg-dark">
+                        <h1 class="text-center">ĐĂNH NHẬP</h1>
+                        <form class="needs-validation" novalidate>
+                          <div class="mb-3 mt-4">
+                            <label for="username" class="form-label">Tên tài khoản</label>
+                            <div class="input-group has-validation">
+                              <input type="text" class="form-control" id="username" placeholder="Họ và tên (Bắt buộc)"
+                                required>
+                              <div class="invalid-feedback">
+                                Hãy nhập tài tên tài khoản.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <div class="invalid-feedback">
+                              Hãy nhập tài tên tài khoản.
+                            </div>
+                          </div>
+                          <button type="submit" class="btn btn-light mt-3">Đăng nhập</button>
+                          <p>Quên tài khoản? <a href="#" data-bs-toggle="modal" data-bs-target="#ModalFormDK">Đăng
+                              ký</a></p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Form Đăng ký -->
+              <div class="modal fade" id="ModalFormDK" tabindex="-1" aria-labelledby="ModalFormLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                      <div class="myform bg-dark">
+                        <h1 class="text-center">Đăng ký Form</h1>
+                        <form class="needs-validation" novalidate>
+                          <div class="mb-3 mt-4">
+                            <label for="username" class="form-label">Tên tài khoản</label>
+                            <div class="input-group has-validation">
+                              <input type="text" class="form-control" id="username" placeholder="Họ và tên (Bắt buộc)"
+                                required>
+                              <div class="invalid-feedback">
+                                Hãy tên tài khoản của bạn.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mb-3 mt-4">
+                            <label for="email" class="form-label">Địa chỉ Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                            <div class="invalid-feedback">
+                              Hãy nhập địa chỉ email hợp lệ.
+                            </div>
+                          </div>
+                          <div class="mb-3 mt-4 d-flex">
+                            <div class="form-check">
+                              <input id="men" name="paymentMethod" type="radio" class="form-check-input" checked
+                                required>
+                              <label class="form-check-label" for="men">Nam</label>
+                            </div>
+                            <div class="form-check m-auto">
+                              <input id="male" name="paymentMethod" type="radio" class="form-check-input" required>
+                              <label class="form-check-label" for="male">Nữ</label>
+                            </div>
+                          </div>
+                          <div class="mb-3 mt-4">
+                            <label for="exampleInputPassword1" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" ng-model="password"
+                              required>
+                            <div class="invalid-feedback">
+                              Hãy nhập mật khẩu của bạn.
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Xác nhận Mật khẩu</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" ng-model="repassword"
+                              required>
+                            <div class="invalid-feedback">
+                              Hãy xác nhận mật khẩu của bạn.
+                            </div>
+                          </div>
+                          <button type="submit" class="btn btn-light mt-3">Đăng ký</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Form Đăng ký -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section ng-controller="myCtrl">
+    <!-- Slide show -->
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active" ng-repeat="image in dataBanners.slice(0,1)">
+          <img src="Image/{{image.tenBN}}" alt="Los Angeles" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item" ng-repeat="image in dataBanners.slice(1,3)">
+          <img src="Image/{{image.tenBN}}" alt="Chicago" class="d-block" style="width:100%">
+        </div>
+      </div>
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <!-- Slide show băng chuyền -->
+  </section>
+  <!-- Khung sản phẩm -->
+  <section>
+    <div class="container text-center h2 mt-5">GIÀY SNEAKER</div>
+    <div class="container" ng-controller="myCtrl">
+      <div class="row mt-5 text-center">
+        <div class="col-md-3 col-sm-6 col-6" ng-repeat="i in dataProducts | filter: {loaiSP: 'Giay'}">
+          <div class="card border-0 sanPham">
+            <img src="Image/{{i.hinh}}" alt="">
+            <div class="card-body">
+              <a href="#" class="card-link h6 text-decoration-none text-black">{{i.tenSP}}</a>
+              <div class="overlay"><a href="" class="bgALink"><i class="fa-solid fa-cart-arrow-down" ng-click="addItem($index)"></i></a></div>
+              <p>{{i.gia}} đ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section ng-controller="myCtrl">
+    <div id="SPBanChay" class="container text-center my-3">
+      <h2 class="font-weight-light">SẢN PHẨM BÁN CHẠY</h2>
+      <div class="row mx-auto my-auto justify-content-center">
+        <div id="recipeCarousel" class="carousel carouselSlide slide" data-bs-ride="carousel carouselSlide">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item carouselItem active">
+              <div class="col-md-3" ng-repeat="sp in ProductsBestSeller.slice(0,10)">
+                <div class="card border-0 sanPham">
+                  <img src="Image/{{sp.hinh}}" class="ktHinhSP" alt="">
+                  <div class="card-body">
+                    <a href="#" class="card-link h6 text-decoration-none text-black">{{sp.tenSP}}</a>
+                    <p>{{sp.gia}} đ</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carouselItem">
+              <div class="col-md-3" ng-repeat="sp in ProductsBestSeller.slice(1,6)">
+                <div class="card border-0">
+                  <img src="Image/{{sp.hinh}}" class="ktHinhSP" alt="">
+                  <div class="card-body">
+                    <a href="#" class="card-link h6 text-decoration-none text-black">{{sp.tenSP}}</a>
+                    <p>{{sp.gia}} đ</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carouselItem">
+              <div class="col-md-3" ng-repeat="sp in ProductsBestSeller.slice(2,6)">
+                <div class="card border-0">
+                  <img src="Image/{{sp.hinh}}" class="ktHinhSP sanPham" alt="">
+                  <div class="card-body">
+                    <a href="#" class="card-link h6 text-decoration-none text-black">{{sp.tenSP}}</a>
+                    <p>{{sp.gia}} đ</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carouselItem">
+              <div class="col-md-3" ng-repeat="sp in ProductsBestSeller.slice(3,6)">
+                <div class="card border-0">
+                  <img src="Image/{{sp.hinh}}" class="ktHinhSP sanPham" alt="">
+                  <div class="card-body">
+                    <a href="#" class="card-link h6 text-decoration-none text-black">{{sp.tenSP}}</a>
+                    <p>{{sp.gia}} đ</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+      <!-- <h5 class="mt-2 fw-light">advances one slide at a time</h5> -->
+    </div>
+    <script src="js/SlideShowMultiItem.js" type="text/javascript"></script>
+  </section>
+  <!-- KHUNG SẢN PHẨM THỨ 2 TRONG MỤC SẢN PHẨM MỚI -->
+  <section ng-controller="myCtrl">
+    <div class="container text-center h2 mt-5">SẢN PHẨM MỚI</div>
+    <div class="container mb-5">
+      <div class="row mt-5 text-center">
+        <div class="col-md-3 col-sm-6 col-6" ng-repeat="spm in dataProducts | limitTo : 4">
+          <div class="card border-0 sanPham">
+            <img src="Image/{{spm.hinh}}" class="ktHinhSP" alt="">
+            <div class="card-body">
+              <a href="#" class="card-link h6 text-decoration-none text-black">{{spm.tenSP}}</a>
+              <p>{{spm.gia}} đ</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-3 col-sm-6 col-6">
+          <div class="card border-0">
+            <img src="Image/hinh2.jpg" class="sanPham" alt="">
+            <div class="card-body">
+              <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+              <p>đ 5.400.000</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-6">
+          <div class="card border-0">
+            <img src="Image/hinh3.jpg" class="sanPham" alt="">
+            <div class="card-body">
+              <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+              <p>đ 5.400.000</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-6">
+          <div class="card border-0">
+            <img src="Image/hinh5.jpeg" class="sanPham" alt="">
+            <div class="card-body">
+              <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+              <p>đ 5.400.000</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <section>
+    <!-- KHUNG SẢN PHẨM THỨ 3 TRONG KHUNG PHỤ KIỆN HOT -->
+    <div class="container text-center h2 mt-5">PHỤ KIỆN</div>
+    <div class="container" ng-controller="myCtrl">
+      <div class="row mt-5 text-center">
+        <div class="col-md-3 col-sm-6 col-6" ng-repeat="x in dataProducts | filter: {loaiSP: 'PhuKien'}">
+          <div class="card border-0 sanPham">
+            <img src="Image/{{x.hinh}}" alt="" class="ktHinhSP">
+            <div class="card-body">
+              <a href="#" class="card-link h6 text-decoration-none text-black">{{x.tenSP}}</a>
+              <p>{{x.gia}} đ</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-3 col-sm-6 col-6">
+          <div class="card border-0">
+            <img src="Image/hinh16.jpg" alt="" class="ktHinhSP sanPham">
+            <div class="card-body">
+              <a href="#" class="card-link h6 text-decoration-none text-black">BALO DÙ A2BLD06206</a>
+              <p>đ 5.400.000</p>
+            </div>
+          </div> -->
+      </div>
+    </div>
+  </section>
+  <section ng-controller="myCtrl">
+    <!-- KHUNG BANNER QUẢNG CÁO THỨ 3 CỦA TRANG -->
+    <!-- Slide show -->
+    <!-- Carousel -->
+    <div id="SlideBanner" class="carousel slide mt-5" data-bs-ride="carousel">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#SlideBanner" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#SlideBanner" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#SlideBanner" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner" ng-controller="myCtrl">
+        <div class="carousel-item active" ng-repeat="image in dataBanners.slice(3,4)">
+          <img src="Image/{{image.tenBN}}" alt="Los Angeles" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item" ng-repeat="image in dataBanners.slice(4,7)">
+          <img src="Image/{{image.tenBN}}" alt="Chicago" class="d-block" style="width:100%">
+        </div>
+      </div>
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#SlideBanner" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#SlideBanner" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <!-- Slide show băng chuyền -->
+    <!-- <div class="banner mt-5">
+    <img src="Image/bannerqc.jpg" class="w-100" alt="bnqc">
+  </div> -->
+  </section>
+  <section ng-controller="myCtrl">
+    <div class="container h2 text-center mt-5 mb-5">Sản phẩm chất lượng</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 mt-3" ng-repeat="t in dataThongTin | filter: {loaiTieuDe: 'tieuDeChinh'}">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card tintuc border-0">
+                <div class="blackBG"></div>
+                <img src="Image/{{t.hinhTT}}" class="ktHinh hinhTTChinh" alt="">
+                <div class="card-img-overlay text-white p-0 cardTT">
+                  <h4 class="card-title textTTChinh">{{t.tieuDe}}</h4>
+                  <p class="card-text h6 textTT">{{t.noiDung}}<a href="#" class="textLink"> <i>Đọc thêm</i></a></p>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="row">
+            <div class="col-lg-12 mt-3" ng-repeat="t in dataThongTin | filter: {loaiTieuDe: 'tieuDePhu'}">
+              <div class="card tintuc border-0">
+                <div class="blackBG"></div>
+                <img src="Image/{{t.hinhTT}}" class="ktHinh hinhTTPhu" alt="">
+                <div class="card-img-overlay text-white">
+                  <h4 class="card-title">{{t.tieuDe}}</h4>
+                  <p class="card-text h6 p-1">{{t.noiDung}} <a href="#" class="textLink"> <i>Đọc thêm</i></a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <img src="Image/bannerTT1.jpg" alt=""> -->
+  </section>
+  <section ng-controller="myCtrl">
+    <div class="container text-center h2 mt-5 mb-5">Tin tức</div>
+    <div class="container mb-5">
+      <div class="row">
+        <div class="col-lg-8 mt-3" ng-repeat="i in dataTinTuc | filter: {loaiTieuDe: 'tieuDeChinh'}">
+          <div class="card border-0">
+            <img src="Image/{{i.hinhTT}}" class="ktHinh anhtintuc" alt="">
+            <div class="card-body">
+              <a href="#" class="card-link h4 text-decoration-none text-black">{{i.tieuDe}}</a>
+              <p>{{i.noiDung}}<a href="#" class="textLink"> <i>Đọc thêm</i></a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-3" ng-repeat="i in dataTinTuc | filter: {loaiTieuDe: 'tieuDePhu'}">
+          <div class="card border-0">
+            <img src="Image/{{i.hinhTT}}" class="ktHinh anhtintuc" alt="">
+            <div class="card-body">
+              <a href="#" class="card-link h4 text-decoration-none text-black">{{i.tieuDe}}</a>
+              <p>{{i.noiDung}}<a href="#" class="textLink"> <i>Đọc thêm</i></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Chân trang -->
+  <footer class="bg-light text-center text-lg-start">
+    <!-- container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <a href="#">
+            <img src="Image/logo2.png" style="width:200px;" alt="logo">
+          </a>
+          <div class="mt-3">
+            <p><strong>Địa chỉ:</strong> 124/67/22 Xô Viết Nghệ Tĩnh, Phường 21, Quận Bình Thạnh, TPHCM</p>
+            <p><strong>Hotline:</strong> 0866 777 797</p>
+            <p><strong>Email:</strong> mynsport@gamil.com</p>
+          </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 mt-3 cotFOoter">
+          <!-- <h5 class="text-uppercase mb-0">Cửa hàng</h5> -->
+
+          <ul class="list-unstyled">
+            <li class="mt-3 h4">
+              Cửa hàng
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none chuFooter">Giới thiệu</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none chuFooter">Tin tức</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none chuFooter">Liên hệ</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none chuFooter">Bảo mật</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 mt-3 cotFOoter">
+          <!-- <h5 class="text-uppercase">Theo dõi</h5> -->
+          <ul class="list-unstyled mb-0">
+            <li class="mt-3 h4">
+              Theo dõi
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Facebook</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Instagram</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Twitter</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Zalo</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 mt-3">
+
+          <ul class="list-unstyled mb-0">
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none h4">Dịch vụ</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Dịch vụ thanh toán</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Chính sách đổi trả</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Chính sách vận chuyển</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Chính sách bảo hành</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+  </footer>
+  <!-- SCRIPT AGULARJS -->
+  <script>
+    // var app = angular.module('myApp', []);
+    // app.controller('myCtrl', function($scope) {
+    //   $scope.product = [{tenSP:"TÚI XÁCH A2TXA05207",hinh:"hinh15.jpg", gia:"5.400.000"},
+    //                     {tenSP:"BALO DÙ A2BLD06206",hinh:"hinh16.jpg", gia:"8.400.000"},
+    //                     {tenSP:"NÓN LƯỠI TRAI A2NLT07214",hinh:"hinh17.jpg", gia:"9.400.000"},
+    //                     {tenSP:"NÓN BUCKET A2NBK07201",hinh:"hinh18.jpg", gia:"2.400.000"}];
+    // });
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope, $http) {
+      $http.get("Json/dataHomePage.json").then(function (response) {
+        $scope.dataProducts = response.data.DataProducts;
+        $scope.ProductsBestSeller = response.data.ProductsBestSeller;
+        $scope.dataBanners = response.data.dataBanners;
+        $scope.dataThongTin = response.data.dataThongTin;
+        $scope.dataTinTuc = response.data.dataTinTuc;
+        $scope.ProductsBestSeller = response.data.ProductsBestSeller;
+      });
+    });
+    app.controller('CartShoppingCtrl', function ($scope, $http) {
+      $http.get("Json/dataCartShoppingPage.json").then(function (response) {
+        $scope.sanPham = response.data.sanPham;
+        $scope.addItem = function (x) {
+          $scope.sanPham.push(x, 1);
+          localStorage.setItem(sanPham);
+          console.log(sanPham);
+        }
+      });
+    });
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+  <script src="js/formValidationCart.js"></script>
+</body>
+
+</html>

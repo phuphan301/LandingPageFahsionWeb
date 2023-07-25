@@ -1,0 +1,45 @@
+/* @media (min-width: 992px) {
+    .card-registration-2 .bg-grey {
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+}
+
+@media (max-width: 991px) {
+    .card-registration-2 .bg-grey {
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+} */
+/* @media (min-width: 1000px) {
+    .tableDiv{
+        width: 800px;
+    }
+} */
+/* @media (min-width: 1000px) {
+    .bgForm {
+    width: 500px !important;
+    }
+} */
+@media (max-width: 1000px) {
+    .bgForm {
+    width: 600px !important;
+    }
+}
+.bgForm{
+    background-color: #282828;
+}
+.iconMenu {
+    background-color: black;
+    list-style: none;
+    width: 40%;
+}
+.iconHover{
+    color: #C0C0C0;
+}
+.iconHover:hover {
+    color: #282828;
+}
+.bgButton{
+    background-color: #C0C0C0;
+}

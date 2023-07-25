@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/homepage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="js/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+  <section>
+    <div class="container-fluid p-1 bg-black text-center text-white">
+      <p class="h5">Tết giảm giá sâu lên đến <span class="badge bg-danger">40%</span> ==> <span
+          class="badge bg-danger">Mua ngay</span></p>
+    </div>
+  </section>
+  <header>
+    <!-- Menu thông tin -->
+    <div class="navbar navbar-expand-md navbar-dark bg-black">
+      <div class="container fontChuMenuTT">
+        <a class="navbar-brand" href="home.html">
+          <img src="Image/logo2.png" alt="Avatar Logo" style="width:100px;" class="rounded-pill">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home <span class="badge rounded-pill bg-warning">5</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Cửa hàng</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Sản phẩm</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Nam</a></li>
+                <li><a class="dropdown-item" href="#">Nữ</a></li>
+                <li><a class="dropdown-item" href="#">Trẻ em</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tài khoản</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Đăng nhập</a></li>
+                <li><a class="dropdown-item" href="#">Đăng ký</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Menu chính -->
+    <div class="class= navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid p-3">
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="container">
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto fontChuMenuChinh">
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Sản phẩm</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="trangSanPham.html">Nike</a></li>
+                  <li><a class="dropdown-item" href="#">MLB</a></li>
+                  <li><a class="dropdown-item" href="#">Adidas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Phụ kiện</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Túi Balo</a></li>
+                  <li><a class="dropdown-item" href="#">Dép</a></li>
+                  <li><a class="dropdown-item" href="#">Nón</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Bộ sưu tập</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Lệ hội</a></li>
+                  <li><a class="dropdown-item" href="#">Công sở</a></li>
+                  <li><a class="dropdown-item" href="#">Thể thao</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Khuyến mãi</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Giảm 60%</a></li>
+                  <li><a class="dropdown-item" href="#">Đồng giá 199k</a></li>
+                  <li><a class="dropdown-item" href="#">Miễn phí ship</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" ng-controller="myCtrl">
+              <input class="form-control me-2 text-black" type="text" ng-model="searchSP" placeholder="Search">
+              <button class="btn btn-dark fa fa-search iconMenu iconHover" type="button"></button>
+              <button class="btn btn-dark fa-solid fa-cart-shopping iconMenu iconHover"
+                onclick="window.location.href='cartShoppingPage.html';"></button>
+              <button class="btn btn-dark fa fa-user iconMenu iconHover" type="button" data-bs-toggle="modal"
+                data-bs-target="#ModalForm"></button>
+              <!-- <span class="badge bg-danger ms-1"> 4</span></button> -->
+              <!-- Form Đăng ký -->
+              <div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                      <div class="myform bg-dark">
+                        <h1 class="text-center">ĐĂNH NHẬP</h1>
+                        <form class="needs-validation" novalidate>
+                          <div class="mb-3 mt-4">
+                            <label for="username" class="form-label">Tên tài khoản</label>
+                            <div class="input-group has-validation">
+                              <input type="text" class="form-control" id="username" placeholder="Họ và tên (Bắt buộc)"
+                                required>
+                              <div class="invalid-feedback">
+                                Hãy nhập tài tên tài khoản.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <div class="invalid-feedback">
+                              Hãy nhập tài tên tài khoản.
+                            </div>
+                          </div>
+                          <button type="submit" class="btn btn-light mt-3">Đăng nhập</button>
+                          <p>Quên tài khoản? <a href="#" data-bs-toggle="modal" data-bs-target="#ModalFormDK">Đăng
+                              ký</a></p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Form Đăng ký -->
+              <div class="modal fade" id="ModalFormDK" tabindex="-1" aria-labelledby="ModalFormLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                      <div class="myform bg-dark">
+                        <h1 class="text-center">Đăng ký Form</h1>
+                        <form class="needs-validation" novalidate>
+                          <div class="mb-3 mt-4">
+                            <label for="username" class="form-label">Tên tài khoản</label>
+                            <div class="input-group has-validation">
+                              <input type="text" class="form-control" id="username" placeholder="Họ và tên (Bắt buộc)"
+                                required>
+                              <div class="invalid-feedback">
+                                Hãy tên tài khoản của bạn.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mb-3 mt-4">
+                            <label for="email" class="form-label">Địa chỉ Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                            <div class="invalid-feedback">
+                              Hãy nhập địa chỉ email hợp lệ.
+                            </div>
+                          </div>
+                          <div class="mb-3 mt-4 d-flex">
+                            <div class="form-check">
+                              <input id="men" name="paymentMethod" type="radio" class="form-check-input" checked
+                                required>
+                              <label class="form-check-label" for="men">Nam</label>
+                            </div>
+                            <div class="form-check m-auto">
+                              <input id="male" name="paymentMethod" type="radio" class="form-check-input" required>
+                              <label class="form-check-label" for="male">Nữ</label>
+                            </div>
+                          </div>
+                          <div class="mb-3 mt-4">
+                            <label for="exampleInputPassword1" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" required>
+                            <div class="invalid-feedback">
+                              Hãy nhập mật khẩu của bạn.
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Xác nhận Mật khẩu</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" required>
+                            <div class="invalid-feedback">
+                              Hãy xác nhận mật khẩu của bạn.
+                            </div>
+                          </div>
+                          <button type="submit" class="btn btn-light mt-3">Đăng ký</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Form Đăng ký -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Thanh bộ lọc sản phẩm -->
+  <section>
+    <div class="container">
+      <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+        <span class="fa fa-bars"></span> Fillter
+      </button>
+    </div>
+    <div class="offcanvas offcanvas-start" id="demo">
+      <div class="offcanvas-body">
+        <div id="filter" class="p-2 bg-light ms-md-4 ms-sm-2 border">
+          <div class="border-bottom h5 text-uppercase">Filter By</div>
+          <div class="box border-bottom">
+            <div class="box-label text-uppercase d-flex align-items-center">THƯƠNG HIỆU <button class="btn ms-auto"
+                type="button" data-bs-toggle="collapse" data-bs-target="#inner-box" aria-expanded="false"
+                aria-controls="inner-box"> <span class="fa fa-plus"></span> </button> </div>
+            <div id="inner-box" class="collapse show">
+              <div class="my-1"> <label class="tick"><input type="checkbox" checked="checked"> Nike <span
+                    class="check"></span> </label> </div>
+              <div class="my-1"> <label class="tick"><input type="checkbox"> <span class="check">Adidas</span>
+                </label> </div>
+              <div class="my-1"> <label class="tick"> <input type="checkbox"> <span class="check"> MLB</span>
+                </label> </div>
+              <div class="my-1"> <label class="tick"><input type="checkbox"> <span class="check">Jordan</span>
+                </label> </div>
+              <div class="my-1"> <label class="tick"> <input type="checkbox"> <span class="check">Converse</span>
+                </label> </div>
+              <div class="my-1"> <label class="tick"><input type="checkbox" checked> Vans <span class="check"></span>
+                </label> </div>
+              <div class="my-1"> <label class="tick"><input type="checkbox"> New Balance<span class="check"></span>
+                </label> </div>
+            </div>
+          </div>
+          <div class="box border-bottom">
+            <div class="box-label text-uppercase d-flex align-items-center">GIÁ SẢN PHẨM <button class="btn ms-auto"
+                type="button" data-bs-toggle="collapse" data-bs-target="#property" aria-expanded="false"
+                aria-controls="property"> <span class="fa fa-plus"></span> </button> </div>
+            <div id="property" class="collapse">
+              <div class="my-1"> <label class="tick"><input type="radio" name="gia" checked="checked"> 0 đ - 1.000.000
+                  đ<span class="check"></span> </label> </div>
+              <div class="my-1"> <label class="tick"><input type="radio" name="gia"> <span class="check">1.000.000 đ -
+                    2.000.000 đ</span>
+                </label> </div>
+              <div class="my-1"> <label class="tick"><input type="radio" name="gia"> <span class="check">2.000.000 đ -
+                    3.500.000 đ</span>
+                </label> </div>
+              <div class="my-1"> <label class="tick"><input type="radio" name="gia">3.500.000 đ - 5.000.000 đ<span
+                    class="check"></span>
+                </label> </div>
+              <div class="my-1"> <label class="tick"><input type="radio" name="gia"> 5.000.000 đ - 8.000.000 đ <span
+                    class="check"></span>
+                </label> </div>
+              <div class="my-1"> <label class="tick"> <input type="radio" name="gia"> 8.000.000 đ 10.000.000 đ <span
+                    class="check"></span> </label> </div>
+            </div>
+          </div>
+          <div class="box border-bottom">
+            <div class="box-label text-uppercase d-flex align-items-center">SIZE GIÀY<button class="btn ms-auto"
+                type="button" data-bs-toggle="collapse" data-bs-target="#amenities" aria-expanded="false"
+                aria-controls="amenities"> <span class="fa fa-plus"></span> </button> </div>
+            <div id="amenities" class="collapse show">
+              <div class="my-1"> <label class="tick"><input type="checkbox" checked="checked"> 38<span
+                    class="check"></span> </label> </div>
+              <div class="my-1"> <label class="tick"><input type="checkbox"> 39<span class="check"></span>
+                </label> </div>
+              <div class="my-1"> <label class="tick"><input type="checkbox"> 40<span class="check"></span>
+                </label> </div>
+              <div class="my-1"> <label class="tick"><input type="checkbox"> 41<span class="check"></span>
+                </label> </div>
+              <div class="my-1"> <label class="tick"><input type="checkbox">42 <span class="check"></span>
+                </label> </div>
+              <div class="my-1"> <label class="tick"><input type="checkbox" checked> 43<span class="check"></span>
+                </label> </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box-label text-uppercase d-flex align-items-center">Kiểu giày<button class="btn ms-auto"
+                type="button" data-bs-toggle="collapse" data-bs-target="#room-facilities" aria-expanded="false"
+                aria-controls="room-facilities"> <span class="fa fa-plus"></span> </button>
+            </div>
+            <div id="room-facilities" class="collapse">
+              <div class="my-1"> <label class="tick"><input type="checkbox" checked="checked"> Low-top<span
+                    class="check"></span> </label> </div>
+              <div class="my-1"> <label class="tick"><input type="checkbox"> <span class="check">Mid-top</span> </label>
+              </div>
+              <div class="my-1"> <label class="tick"><input type="checkbox"> <span class="check">High-top</span>
+                </label> </div>
+              <div class="my-1"> <label class="tick"> <input type="checkbox"> Slip-on<span class="check"></span>
+                </label> </div>
+              <div class="my-1"> <label class="tick"><input type="checkbox"> Mule <span class="check"></span> </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button to open the offcanvas sidebar -->
+
+  </section>
+  <!-- NỘI DUNG SẢN PHẨM -->
+  <article>
+    <div class="container">
+      <!-- <div class="noidung">
+            <iframe class="table-responsive iframe" src="sanpham.html" name="myFrame" frameborder="0"></iframe>
+          </div> -->
+      <section ng-controller="myCtrl">
+        <div class="container">
+          <div class="row mt-5 text-center">
+            <div class="col-md-3 col-sm-6 col-6" ng-repeat="s in dataProducts | filter : {loaiSP: 'Giay'} | filter: searchSP">
+              <div class="card border-0">
+                <img src="Image/{{s.hinh}}" class="sanPham" alt="">
+                <div class="card-body">
+                  <a href="#" class="card-link h6 text-decoration-none text-black">{{s.tenSP}}</a>
+                  <p>{{s.gia}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+          <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0);">4</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0);">5</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+  <section>
+    <div class="container text-center h2 mt-5 mb-5">Sản phẩm chất lượng cao</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="card tintuc">
+            <img src="Image/hinh9.jpg" class="ktHinh" alt="">
+            <div class="card-img-overlay text-white">
+              <h4 class="card-title">Bảo hành 3 năm</h4>
+              <p class="card-text h6">Bảo hành bảo dưỡng miễn phí trong 3 năm, Nhằm hỗ trợ khách hàng tốt nhất trong quá
+                trình sử dụng</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card tintuc">
+            <img src="Image/hinh10.jpg" class="ktHinh" alt="">
+            <div class="card-img-overlay text-white">
+              <h4 class="card-title">Cá nhân hóa sản phẩm</h4>
+              <p class="card-text h6">Với châm ngôn "cá nhân hóa sản phẩm cho khách hàng" từng sản phẩm được thiết kế
+                phù với nhất với đôi chân
+                của khách thoải mãi nhất trong các hoạt động thường ngày.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card tintuc">
+            <img src="Image/hinh11.jpg" class="ktHinh" alt="">
+            <div class="card-img-overlay text-white">
+              <h4 class="card-title">Thương hiệu lớn</h4>
+              <p class="card-text h6">Với nhiều chi nhánh trên toàn quốc và hợp tác với nhiều thương hiệu giày lớn. Luôn
+                sẵn sàng phục vụ
+                khách bất cứ nơi đâu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container text-center">
+      <p class="h3">THÔNG TIN</p>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- <p class="h1">Ben phai</p> -->
+          <div class="container-fluid thongTin">
+            <div class="container-fluid">
+              <div class="row thongTin">
+                <div class="col-md-4">
+                  <img src="Image/hinh9.jpg" alt="">
+                </div>
+                <div class="col-md-8">
+                  <a class="chuThongTin" href="#">Sản phẩm mới</a>
+                  <p>Ra mắt sản phẩm mới cùng với nhiều bộ sưu tập cho năm mới cùng với nhiều ưu đãi hấp dẫn...</p>
+                </div>
+              </div>
+              <div class="row thongTin">
+                <div class="col-md-4">
+                  <img src="Image/bannerthongtin8.jpg" alt="">
+                </div>
+                <div class="col-md-8">
+                  <a class="chuThongTin" href="#">Đa dạng các mặt hàng sản phẩm</a>
+                  <p>Với nhiều bộ sưu tập cùng với các mẫu mới mang đến đa dạng lựa chọn phối đồ...</p>
+                </div>
+              </div>
+              <div class="row thongTin">
+                <div class="col-md-4">
+                  <img src="Image/bannerthongtin7.jpg" alt="">
+                </div>
+                <div class="col-md-8">
+                  <a class="chuThongTin" href="#">Sắm đồ tết sale hấp dẫn</a>
+                  <p>Hòa cùng không khí sale cuối năm nhộn nhịp và sôi động, chương trình ưu đãi Good Sale - Good Buy
+                    Mua là cơ hội tốt</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <!-- <p class="h1">Ben phai</p> -->
+          <div class="container-fluid thongTin">
+            <div class="container-fluid">
+              <div class="row thongTin">
+                <div class="col-md-4">
+                  <img src="Image/hinh9.jpg" alt="">
+                </div>
+                <div class="col-md-8">
+                  <a class="chuThongTin" href="#">Ra mắt sản phẩm mới</a>
+                  <p>Sự kiện ra mắt sản phẩm cho năm mới...</p>
+                </div>
+              </div>
+              <div class="row thongTin">
+                <div class="col-md-4">
+                  <img src="Image/bannerthongtin5.jpg" alt="">
+                </div>
+                <div class="col-md-8">
+                  <a class="chuThongTin" href="#">Đồng giá lên đến 36%</a>
+                  <p>Đồng hành cùng Quý khách hàng trong chương trình mua sắm nhân dịp tết đến xuân về. Routine xin gửi
+                    đến quý khách 2...</p>
+                </div>
+              </div>
+              <div class="row thongTin">
+                <div class="col-md-4">
+                  <img class="maunenhinh" src="Image/bannerthongtin6.jpg" alt="">
+                </div>
+                <div class="col-md-8">
+                  <a class="chuThongTin" href="#">Tết này mặc gì cho đẹp</a>
+                  <p>Mặc gì vừa hợp Xu hướng thời trang Tết 2023?” là câu hỏi lớn nhất của hầu hết các tín đồ thời trang
+                    mỗi dịp Tết đến Xuân về</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Chân trang -->
+  <footer class="bg-light text-center text-lg-start">
+    <!-- container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <a href="#">
+            <img src="Image/logo2.png" style="width:200px;" alt="logo">
+          </a>
+          <div class="mt-3">
+            <p><strong>Địa chỉ:</strong> 124/67/22 Xô Viết Nghệ Tĩnh, Phường 21, Quận Bình Thạnh, TPHCM</p>
+            <p><strong>Hotline:</strong> 0866 777 797</p>
+            <p><strong>Email:</strong> mynsport@gamil.com</p>
+          </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 mt-3 cotFOoter">
+          <!-- <h5 class="text-uppercase mb-0">Cửa hàng</h5> -->
+
+          <ul class="list-unstyled">
+            <li class="mt-3 h4">
+              Cửa hàng
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none chuFooter">Giới thiệu</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none chuFooter">Tin tức</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none chuFooter">Liên hệ</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none chuFooter">Bảo mật</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 mt-3 cotFOoter">
+          <!-- <h5 class="text-uppercase">Theo dõi</h5> -->
+          <ul class="list-unstyled mb-0">
+            <li class="mt-3 h4">
+              Theo dõi
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Facebook</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Instagram</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Twitter</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Zalo</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 mt-3">
+
+          <ul class="list-unstyled mb-0">
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none h4">Dịch vụ</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Dịch vụ thanh toán</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Chính sách đổi trả</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Chính sách vận chuyển</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-dark text-decoration-none">Chính sách bảo hành</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+  </footer>
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope, $http) {
+      $http.get("Json/dataHomePage.json").then(function (response) {
+        $scope.dataProducts = response.data.DataProducts;
+        $scope.ProductsBestSeller = response.data.ProductsBestSeller;
+        $scope.dataBanners = response.data.dataBanners;
+        $scope.dataThongTin = response.data.dataThongTin;
+        $scope.dataTinTuc = response.data.dataTinTuc;
+        $scope.ProductsBestSeller = response.data.ProductsBestSeller;
+      });
+    });
+    app.controller('CartShoppingCtrl', function ($scope, $http) {
+      $http.get("Json/dataCartShoppingPage.json").then(function (response) {
+        $scope.sanPham = response.data.sanPham;
+        $scope.removeItem = function (x) {
+          $scope.products.push(x, 1);
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/homepage.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <style type="text/css">
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+      width: 50%;
+      margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="input-group">
+      <input class="input--style-3" type="password" placeholder="Mật khẩu*" name="password" ng-model="user.password"
+        required>
+      <div class="errortext" ng-show="myForm.password.$dirty && myForm.password.$invalid">
+        <span ng-show="myForm.password.$error.required" style="color: red;">Password không được để trống!</span>
+      </div>
+    </div>
+    <div class="input-group">
+      <input class="input--style-3" type="password" placeholder="Xác nhận mật khẩu*" name="repassword"
+        ng-model="user.repassword" required>
+      <div class="errortext"
+        ng-show="myForm.repassword.$dirty && myForm.repassword.$invalid || myForm.repassword.$dirty && user.repassword">
+        <span ng-show="myForm.repassword.$error.required" style="color: red;">Re-password không được để trống!</span>
+        <span ng-show="!myForm.repassword.$error.required && user.repassword!=user.password"
+          style="color: red;">Password không trùng khớp</span>
+      </div>
+    </div>
+  </section>
+  <div class="container mt-3">
+    <h2>Button Outline</h2>
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+    <button type="button" class="btn btn-outline-success">Success</button>
+    <button type="button" class="btn btn-outline-info">Info</button>
+    <button type="button" class="btn btn-outline-warning">Warning</button>
+    <button type="button" class="btn btn-outline-danger">Danger</button>
+    <button type="button" class="btn btn-outline-dark">Dark</button>
+    <button type="button" class="btn btn-outline-light text-dark">Light</button>
+  </div>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Liên hệ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Cửa hàng</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#ModalForm">Giới
+              thiệu</a>
+          </li>
+        </ul>
+        <!-- CSS Trang form dang nhap -->
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ModalForm">
+          Launch Modal Form
+        </button>
+        <!-- Form dang nhap -->
+        <div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+                <div class="myform bg-dark">
+                  <h1 class="text-center">Login Form</h1>
+                  <form>
+                    <div class="mb-3 mt-4">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+
+                    <button type="submit" class="btn btn-light mt-3">LOGIN</button>
+                    <p>Not a member? <a href="#" data-bs-toggle="modal" data-bs-target="#ModalFormDK">Signup now</a></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Form Đăng ký -->
+        <div class="modal fade" id="ModalFormDK" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+                <div class="myform bg-dark">
+                  <h1 class="text-center">Đăng ký Form</h1>
+                  <form>
+                    <div class="mb-3 mt-4">
+                      <label for="exampleInputEmail1" class="form-label">Họ và tên</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3 mt-4">
+                      <label for="exampleInputEmail1" class="form-label"> Địa chỉ Email</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3 mt-4">
+                      <label for="exampleInputEmail1" class="form-label">Mật khẩu</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Xác nhận mật khẩu</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-light mt-3">Đăng ký</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Form Đăng ký -->
+        <!-- Ket thuc form dang nhap -->
+        <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Search">
+          <button type="button" class="btn btn-outline-dark">Dark</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid mt-3">
+    <h3>Navbar Forms</h3>
+    <p>You can also include forms inside the navigation bar.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example21" class="form-control" />
+                <label class="form-label" for="form5Example21">Email address</label>
+              </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-outline-light mb-4">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+
+      <!-- Section: Text -->
+      <section class="mb-4">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+          eum harum corrupti dicta, aliquam sequi voluptate quas.
+        </p>
+      </section>
+      <!-- Section: Text -->
+
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Company name
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Angular</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">React</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Vue</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Laravel</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  </footer>
+  <!-- Footer -->
+
+  <footer class="bg-light text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-dark">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-0">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-dark">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-dark">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-0">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-dark">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+  </footer>
+  <p><a href="#" class="text-primary">Primary link</a></p>
+  <p><a href="#" class="text-secondary">Secondary link</a></p>
+  <p><a href="#" class="text-success">Success link</a></p>
+  <p><a href="#" class="text-danger">Danger link</a></p>
+  <p><a href="#" class="text-warning">Warning link</a></p>
+  <p><a href="#" class="text-info">Info link</a></p>
+  <p><a href="#" class="text-light bg-dark">Light link</a></p>
+  <p><a href="#" class="text-dark">Dark link</a></p>
+  <p><a href="#" class="text-muted">Muted link</a></p>
+  <p><a href="#" class="text-white bg-dark">White link</a></p>
+  <!-- Slide show -->
+  <!-- Carousel -->
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Image/banner5.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+      </div>
+      <div class="carousel-item">
+        <img src="Image/banner6.jpg" alt="Chicago" class="d-block" style="width:100%">
+      </div>
+      <div class="carousel-item">
+        <img src="Image/banner9.png" alt="New York" class="d-block" style="width:100%">
+      </div>
+    </div>
+
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <!-- Slide show băng chuyền -->
+  <!-- Slide show -->
+  <!-- Carousel -->
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Image/banner5.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+      </div>
+      <div class="carousel-item">
+        <img src="Image/banner6.jpg" alt="Chicago" class="d-block" style="width:100%">
+      </div>
+      <div class="carousel-item">
+        <img src="Image/banner9.png" alt="New York" class="d-block" style="width:100%">
+      </div>
+    </div>
+
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <!-- Slide show băng chuyền -->
+  <section>
+    <div class="container-fluid p-3 bg-dark"></div>
+  </section>
+  <!-- De mo slide bar -->
+  <div class="container my-sm-5 border p-0 bg-sec-light">
+    <div id="content">
+      <div class="bg-light p-2 px-md-4 px-3 shadow-sm">
+        <div class="d-flex align-items-center">
+          <div class="user-select-none">Home</div>
+          <div class="fas fa-angle-right px-2"></div>
+          <div id="navigator" class="text-primary"></div>
+        </div>
+      </div>
+      <div class="d-sm-flex align-items-sm-center py-sm-3 px-md-3 location"> <input type="text" required
+          placeholder="Location" class="mx-sm-2 mx-3 my-sm-0 my-2 form-control"> <input type="text" required
+          placeholder="From" class=" mx-md-2 mx-sm-1 mx-3 my-sm-0 my-2 form-control"> <input type="text" required
+          placeholder="To" class="mx-sm-2 mx-3 my-sm-0 my-2 form-control"> <input type="submit" value="search"
+          class="btn btn-primary mx-3 my-sm-0 mb-2"> </div>
+      <div class="d-sm-flex">
+        <div class="me-sm-2">
+          <div id="filter" class="p-2 bg-light ms-md-4 ms-sm-2 border">
+            <div class="border-bottom h5 text-uppercase">Filter By</div>
+            <div class="box border-bottom">
+              <div class="box-label text-uppercase d-flex align-items-center">Price <button class="btn ms-auto"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#inner-box" aria-expanded="false"
+                  aria-controls="inner-box"> <span class="fas fa-plus"></span> </button> </div>
+              <div id="inner-box" class="collapse show">
+                <div class="my-1"> <label class="tick">Less than 2000 <input type="checkbox" checked="checked"> <span
+                      class="check"></span> </label> </div>
+                <div class="my-1"> <label class="tick">2000 - 3000 <input type="checkbox"> <span class="check"></span>
+                  </label> </div>
+                <div class="my-1"> <label class="tick">3000 - 4500 <input type="checkbox"> <span class="check"></span>
+                  </label> </div>
+                <div class="my-1"> <label class="tick">4500 - 6000 <input type="checkbox"> <span class="check"></span>
+                  </label> </div>
+                <div class="my-1"> <label class="tick">6000 - 8000 <input type="checkbox"> <span class="check"></span>
+                  </label> </div>
+                <div class="my-1"> <label class="tick">8000 -10,000 <input type="checkbox" checked> <span
+                      class="check"></span> </label> </div>
+                <div class="my-1"> <label class="tick">10,000 and Above <input type="checkbox"> <span
+                      class="check"></span> </label> </div>
+              </div>
+            </div>
+            <div class="box border-bottom">
+              <div class="box-label text-uppercase d-flex align-items-center">Property Type <button class="btn ms-auto"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#property" aria-expanded="false"
+                  aria-controls="property"> <span class="fas fa-plus"></span> </button> </div>
+              <div id="property" class="collapse">
+                <div class="my-1"> <label class="tick">Hotels <input type="checkbox" checked="checked"> <span
+                      class="check"></span> </label> </div>
+                <div class="my-1"> <label class="tick">Apartments <input type="checkbox"> <span class="check"></span>
+                  </label> </div>
+                <div class="my-1"> <label class="tick">Guest houses <input type="checkbox"> <span class="check"></span>
+                  </label> </div>
+                <div class="my-1"> <label class="tick">Resorts <input type="checkbox"> <span class="check"></span>
+                  </label> </div>
+                <div class="my-1"> <label class="tick">Villas <input type="checkbox"> <span class="check"></span>
+                  </label> </div>
+                <div class="my-1"> <label class="tick">Lodges <input type="checkbox" checked> <span
+                      class="check"></span> </label> </div>
+                <div class="my-1"> <label class="tick">Holiday Homes <input type="checkbox"> <span class="check"></span>
+                  </label> </div>
+              </div>
+            </div>
+            <div class="box border-bottom">
+              <div class="box-label text-uppercase d-flex align-items-center">Amenities <button class="btn ms-auto"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#amenities" aria-expanded="false"
+                  aria-controls="amenities"> <span class="fas fa-plus"></span> </button> </div>
+              <div id="amenities" class="collapse show">
+                <div class="my-1"> <label class="tick">Parking <input type="checkbox" checked="checked"> <span
+                      class="check"></span> </label> </div>
+                <div class="my-1"> <label class="tick">Pets Allowed <input type="checkbox"> <span class="check"></span>
+                  </label> </div>
+                <div class="my-1"> <label class="tick">Room Service <input type="checkbox"> <span class="check"></span>
+                  </label> </div>
+                <div class="my-1"> <label class="tick">Family Rooms <input type="checkbox"> <span class="check"></span>
+                  </label> </div>
+                <div class="my-1"> <label class="tick">Free Wifi <input type="checkbox"> <span class="check"></span>
+                  </label> </div>
+                <div class="my-1"> <label class="tick">Non-smoking Rooms <input type="checkbox" checked> <span
+                      class="check"></span> </label> </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-label text-uppercase d-flex align-items-center">Room Facilities <button
+                  class="btn ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#room-facilities"
+                  aria-expanded="false" aria-controls="room-facilities"> <span class="fas fa-plus"></span> </button>
+              </div>
+              <div id="room-facilities" class="collapse">
+                <div class="my-1"> <label class="tick">Air Condentioning <input type="checkbox" checked="checked"> <span
+                      class="check"></span> </label> </div>
+                <div class="my-1"> <label class="tick">Desk <input type="checkbox"> <span class="check"></span> </label>
+                </div>
+                <div class="my-1"> <label class="tick">Balcony <input type="checkbox"> <span class="check"></span>
+                  </label> </div>
+                <div class="my-1"> <label class="tick">Flat Screen TV <input type="checkbox"> <span
+                      class="check"></span> </label> </div>
+                <div class="my-1"> <label class="tick">Coffe/Tea Maker <input type="checkbox"> <span
+                      class="check"></span> </label> </div>
+                <div class="my-1"> <label class="tick">Washing Machine <input type="checkbox" checked> <span
+                      class="check"></span> </label> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-2 border" id="hotels">
+          <div class="hotel py-2 px-2 pb-4 border-bottom">
+            <div class="row">
+              <div class="col-lg-3"> <img
+                  src="https://images.unsplash.com/photo-1580835845971-a393b73bf370?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80"
+                  alt="" class="hotel-img"> </div>
+              <div class="col-lg-9">
+                <div class="d-md-flex align-items-md-center">
+                  <div class="name">Mayflower Hibiscus Inn <span class="city">Bandra, Mumbai</span> </div>
+                  <div class="ms-auto code text-uppercase">ABD09eh8</div>
+                </div>
+                <div class="rating"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span
+                    class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="far fa-star"></span>
+                  <!-- Book now Enquiry --> </div>
+                <div class="d-flex flex-column tags pt-1">
+                  <div><span class="fas fa-comment-dollar"></span> Fee Canellation</div>
+                  <div><span class="fas fa-receipt"></span> Express check-in</div>
+                  <div><span class="fas fa-concierge-bell"></span> Concierge</div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end mt-1">
+              <div class="btn enquiry text-uppercase mx-2">Enquiry</div>
+              <div class="btn btn-primary text-uppercase">Book Now</div>
+            </div>
+          </div>
+          <div class="hotel py-2 px-2 pb-4 border-bottom">
+            <div class="row">
+              <div class="col-lg-3"> <img
+                  src="https://images.unsplash.com/photo-1596618502142-d2a9d0c1fc2e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTd8fHJlc29ydHN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  alt="" class="hotel-img"> </div>
+              <div class="col-lg-9">
+                <div class="d-md-flex align-items-md-center">
+                  <div class="name">Sunflower Hibiscus Inn <span class="city">Zuhu, Mumbai</span> </div>
+                  <div class="ms-auto code text-uppercase">ABD09eh8</div>
+                </div>
+                <div class="rating"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span
+                    class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="far fa-star"></span>
+                  <!-- Book now Enquiry --> </div>
+                <div class="d-flex flex-column tags pt-1">
+                  <div><span class="fas fa-comment-dollar"></span> Fee Canellation</div>
+                  <div><span class="fas fa-receipt"></span> Express check-in</div>
+                  <div><span class="fas fa-concierge-bell"></span> Concierge</div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end mt-1">
+              <div class="btn enquiry text-uppercase mx-2">Enquiry</div>
+              <div class="btn btn-primary text-uppercase">Book Now</div>
+            </div>
+          </div>
+          <div class="hotel py-2 px-2 pb-4">
+            <div class="row">
+              <div class="col-lg-3"> <img
+                  src="https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzV8fHJlc29ydHN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  alt="" class="hotel-img"> </div>
+              <div class="col-lg-9">
+                <div class="d-md-flex align-items-md-center">
+                  <div class="name">Atlantic Inn <span class="city">Mulund West, Mumbai</span> </div>
+                  <div class="ms-auto code text-uppercase">ABD09eh8</div>
+                </div>
+                <div class="rating"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span
+                    class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="far fa-star"></span>
+                  <!-- Book now Enquiry --> </div>
+                <div class="d-flex flex-column tags pt-1">
+                  <div><span class="fas fa-comment-dollar"></span> Fee Canellation</div>
+                  <div><span class="fas fa-receipt"></span> Express check-in</div>
+                  <div><span class="fas fa-concierge-bell"></span> Concierge</div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end mt-1">
+              <div class="btn enquiry text-uppercase mx-2">Enquiry</div>
+              <div class="btn btn-primary text-uppercase">Book Now</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Navber Collape demo -->
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" alt="MDB Logo"
+            loading="lazy" />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+        <a class="text-reset me-3" href="#">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+
+        <!-- Notifications -->
+        <div class="dropdown">
+          <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button"
+            data-mdb-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-bell"></i>
+            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="#">Some news</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Another news</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Avatar -->
+        <div class="dropdown">
+          <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
+            role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25"
+              alt="Black and White Portrait of a Man" loading="lazy" />
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+            <li>
+              <a class="dropdown-item" href="#">My profile</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Settings</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+
+  <div>
+    <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button"
+      data-mdb-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-bell"></i>
+      <span class="badge rounded-pill badge-notification bg-danger">1</span>
+    </a>
+  </div>
+  <!-- Slide show chay chu cua trang web -->
+  <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card">
+          <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title 1</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title 2</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title 3</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title 4</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title 5</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title 6</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title 7</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title 8</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title 9</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Trang slide chuyen san pham -->
+  <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card border-0">
+          <img src="Image/hinh4.jpeg" class="sanPham" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card border-0">
+          <img src="Image/hinh4.jpeg" class="sanPham" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card border-0">
+          <img src="Image/hinh4.jpeg" class="sanPham" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card border-0">
+          <img src="Image/hinh4.jpeg" class="sanPham" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card border-0">
+          <img src="Image/hinh4.jpeg" class="sanPham" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card border-0">
+          <img src="Image/hinh4.jpeg" class="sanPham" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card border-0">
+          <img src="Image/hinh4.jpeg" class="sanPham" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card border-0">
+          <img src="Image/hinh4.jpeg" class="sanPham" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card border-0">
+          <img src="Image/hinh4.jpeg" class="sanPham" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="container">
+    <img src="Image/bannerqc10.jpg" alt="">
+  </div>
+  <!-- Cart SP -->
+  <div class="item mb-4">
+    <div class="card border-0 shadow opacity">
+      <div class="img-box">
+        <img src="Image/hinhgiay1.jpg" class="card-img-top img-edit img-opacity" alt="">
+      </div>
+      <div class=" middle">
+        <div class="py-3">
+          <ul class="list-inline d-flex mm">
+            <li class="list-inline-item">
+              <a class="btn btn-sm btn-outline-dark" href="#!">
+                <i class="bi bi-suit-heart"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-dark" href="cart.html">Add cart</a>
+            </li>
+            <li class="list-inline-item ">
+              <a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal">
+                <i class="bi bi-fullscreen"></i>
+              </a>
+            </li>
+          </ul>
+          <h6 style="padding: 0; margin: 0;"><a class="reset-anchor" href="">
+              <i class="bi bi-sss bi-star-fill"></i>
+              <i class="bi bi-sss bi-star-fill"></i>
+              <i class="bi bi-sss bi-star-fill"></i>
+              <i class="bi bi-sss bi-star-fill"></i>
+            </a></h6>
+          <p class="small text-muted">$15,321</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4 class="text-center">Đồng hồ</h4>
+      </div>
+    </div>
+  </div>
+  <i class="fa-light fa-cart-plus"></i>
+  <i class="fa-regular fa-heart iconHover"></i>
+  <i class="fa-thin fa-cart-plus"></i>
+  <i class="fa-thin fa-cart-arrow-down"></i>
+  <i class="fa-solid fa-cart-arrow-down iconHover"></i>
+  <!-- Tao hieu ung gio hang cho san pham -->
+  <div class="container">
+    <div class="row mt-5 text-center">
+      <div class="col-md-3 col-sm-6 col-6">
+        <div class="card border-0 sanPham">
+          <img src="Image/hinh1.jpg" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <div class="overlay"><a href="" class="bgALink"><i class="fa-solid fa-cart-arrow-down"></i></a></div>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
+        <div class="card border-0">
+          <img src="Image/hinh2.jpg" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
+        <div class="card border-0">
+          <img src="Image/hinh3.jpg" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
+        <div class="card border-0">
+          <img src="Image/hinh4.jpeg" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
+        <div class="card border-0">
+          <img src="Image/hinh2.jpg" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
+        <div class="card border-0">
+          <img src="Image/hinh3.jpg" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
+        <div class="card border-0">
+          <img src="Image/hinh4.jpeg" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
+        <div class="card border-0">
+          <img src="Image/hinh4.jpeg" alt="">
+          <div class="card-body">
+            <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+            <p>đ 5.400.000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Form validtion demo -->
+  <div class="container mt-3">
+    <h3>Form Validation</h3>
+    <p>Try to submit the form.</p>
+
+    <form action="/action_page.php" class="needs-validated">
+      <div class="mb-3 mt-3">
+        <label for="uname" class="form-label">Username:</label>
+        <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="mb-3">
+        <label for="pwd" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
+        <label class="form-check-label" for="myCheck">I agree on blabla.</label>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Check this checkbox to continue.</div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <!-- Thanh tim kiem -->
+  <section>
+    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalSearch">OPEN</button>
+    <div class="modal boxSearch" id="modalSearch">
+      <div class="input-group">
+        <input type="search" class="form-search rounded" placeholder="Search" aria-label="Search"
+          aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-dark">search</button>
+      </div>
+    </div>
+  </section>
+  <section>
+    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ModalSearch">
+      Launch Modal Search
+    </button>
+    <!-- Form tim kiem -->
+    <div class="modal fade" id="ModalSearch" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-1">
+          <div class="modal-body d-flex">
+            <input class="form-control me-2 text-black" type="text" ng-model="searchSP" placeholder="Search">
+            <button class="btn btn-dark fa fa-search iconMenu iconHover" type="button"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Form tim kiem -->
+  </section>
+  <section class="center slider" ng-controller="myCtrl">
+    <div class="card border-0">
+      <img src="Image/hinh1.jpg" class="sanPham" alt="">
+      <div class="card-body">
+        <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+        <p>đ 5.400.000</p>
+      </div>
+    </div>
+    <div class="card border-0">
+      <img src="Image/hinh1.jpg" class="sanPham" alt="">
+      <div class="card-body">
+        <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+        <p>đ 5.400.000</p>
+      </div>
+    </div>
+    <div class="card border-0">
+      <img src="Image/hinh1.jpg" class="sanPham" alt="">
+      <div class="card-body">
+        <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+        <p>đ 5.400.000</p>
+      </div>
+    </div>
+    <div class="card border-0">
+      <img src="Image/hinh1.jpg" class="sanPham" alt="">
+      <div class="card-body">
+        <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+        <p>đ 5.400.000</p>
+      </div>
+    </div>
+    <div class="card border-0">
+      <img src="Image/hinh1.jpg" class="sanPham" alt="">
+      <div class="card-body">
+        <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+        <p>đ 5.400.000</p>
+      </div>
+    </div>
+    <div class="card border-0">
+      <img src="Image/hinh1.jpg" class="sanPham" alt="">
+      <div class="card-body">
+        <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+        <p>đ 5.400.000</p>
+      </div>
+    </div>
+    <div class="card border-0">
+      <img src="Image/hinh1.jpg" class="sanPham" alt="">
+      <div class="card-body">
+        <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+        <p>đ 5.400.000</p>
+      </div>
+    </div>
+    <div class="card border-0">
+      <img src="Image/hinh1.jpg" class="sanPham" alt="">
+      <div class="card-body">
+        <a href="#" class="card-link h6 text-decoration-none text-black">Nike Jordan 1 Low Shadow Toe</a>
+        <p>đ 5.400.000</p>
+      </div>
+    </div>
+
+    <div class=row>
+      <div class="col-ld-6">
+        <div>
+          <label for="exampleInputEmail1" class="form-label">Title</label>
+          <input type="text" class="form-control" aria-describedby="emailHelp">
+        </div>
+
+
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Href</label>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    </div>
+
+    <!-- <div>
+        <img src="http://placehold.it/350x300?text=1">
+      </div>
+      <div>
+        <img src="http://placehold.it/350x300?text=2">
+      </div>
+      <div>
+        <img src="http://placehold.it/350x300?text=3">
+      </div>
+      <div>
+        <img src="http://placehold.it/350x300?text=4">
+      </div>
+      <div>
+        <img src="http://placehold.it/350x300?text=5">
+      </div>
+      <div>
+        <img src="http://placehold.it/350x300?text=6">
+      </div>
+      <div>
+        <img src="http://placehold.it/350x300?text=7">
+      </div>
+      <div>
+        <img src="http://placehold.it/350x300?text=8">
+      </div>
+      <div>
+        <img src="http://placehold.it/350x300?text=9">
+      </div> -->
+  </section>
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope, $http) {
+      $http.get("Json/dataHomePage.json").then(function (response) {
+        $scope.dataProducts = response.data.DataProducts;
+        $scope.ProductsBestSeller = response.data.ProductsBestSeller;
+        $scope.dataBanners = response.data.dataBanners;
+        $scope.dataThongTin = response.data.dataThongTin;
+        $scope.dataTinTuc = response.data.dataTinTuc;
+        $scope.ProductsBestSeller = response.data.ProductsBestSeller;
+      });
+    });
+    app.controller('CartShoppingCtrl', function ($scope, $http) {
+      $http.get("Json/dataCartShoppingPage.json").then(function (response) {
+        $scope.sanPham = response.data.sanPham;
+        $scope.removeItem = function (x) {
+          $scope.products.push(x, 1);
+        }
+      });
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function () {
+      $(".vertical-center-4").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 4,
+        slidesToScroll: 2
+      });
+      $(".vertical-center-3").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".vertical-center-2").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 2,
+        slidesToScroll: 2
+      });
+      $(".vertical-center").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+      });
+      $(".vertical").slick({
+        dots: true,
+        vertical: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".center").slick({
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 5,
+        slidesToScroll: 3
+      });
+      $(".variable").slick({
+        dots: true,
+        infinite: true,
+        variableWidth: true
+      });
+      $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true
+      });
+    });
+  </script>
+
+  <div class=row>
+    <div class="col-ld-6">
+      <label for="exampleInputEmail1" class="form-label">Title</label>
+      <input type="text" class="form-control" aria-describedby="emailHelp">
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Href</label>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <dic class="col-3">
+      <div class="mb-3 mt-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="pwd" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      </div>
+    </div>
+    <div class="col-6">
+      <img class="card-img-top" src="..." alt="Card image cap" style="width: 100px; object-fit: cover;">
+    </div>
+  </div>
+
+</body>
+
+</html>

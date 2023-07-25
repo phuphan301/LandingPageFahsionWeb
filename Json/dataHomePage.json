@@ -1,0 +1,187 @@
+{
+    "DataProducts": [
+        {
+            "tenSP":"Nike Jordan 1 Low Shadow Toe",
+            "hinh": "hinh1.jpg",
+            "gia": "5.400.000",
+            "loaiSP":"Giay"
+        },
+        {
+            "tenSP":"Air Jordan Low Shadow",
+            "hinh": "hinh2.jpg",
+            "gia": "6.400.000",
+            "loaiSP":"Giay"
+        },
+        {
+            "tenSP":"Air Force 3 White Toe",
+            "hinh": "hinh3.jpg",
+            "gia": "8.400.000",
+            "loaiSP":"Giay"
+        },
+        {
+            "tenSP":"Nike Jordan Low Retro High",
+            "hinh": "hinh4.jpeg",
+            "gia": "9.400.000",
+            "loaiSP":"Giay"
+        },
+        {
+            "tenSP":"New Balance Orange Low",
+            "hinh": "hinh5.jpeg",
+            "gia": "2.400.000",
+            "loaiSP":"Giay"
+        },
+        {
+            "tenSP":"New Balance White Green",
+            "hinh": "hinhgiay1.jpg",
+            "gia": "1.400.000",
+            "loaiSP":"Giay"
+        },
+        {
+            "tenSP":"New Balance Low Shadow",
+            "hinh": "hinhgiay2.jpg",
+            "gia": "2.400.000",
+            "loaiSP":"Giay"
+        },
+        {
+            "tenSP":"Air Jordan High Shadow Red",
+            "hinh": "hinhgiay3.jpg",
+            "gia": "1.400.000",
+            "loaiSP":"Giay"
+        },
+        {
+            "tenSP":"TÚI XÁCH A2TXA05207",
+            "hinh": "hinh15.jpg",
+            "gia": "400.000",
+            "loaiSP":"PhuKien"
+        },
+        {
+            "tenSP":"BALO DÙ A2BLD06206",
+            "hinh": "hinh16.jpg",
+            "gia": "500.000",
+            "loaiSP":"PhuKien"
+        },
+        {
+            "tenSP":"NÓN LƯỠI TRAI A2NLT07214",
+            "hinh": "hinh17.jpg",
+            "gia": "800.000",
+            "loaiSP":"PhuKien"
+        },
+        {
+            "tenSP":"NÓN BUCKET A2NBK07201",
+            "hinh": "hinh18.jpg",
+            "gia": "200.000",
+            "loaiSP":"PhuKien"
+        }
+    ],
+    "ProductsBestSeller": [
+        {
+            "tenSP":"Nike Jordan 1 Low Shadow Toe",
+            "hinh": "hinh1.jpg",
+            "gia": "5.400.000",
+            "loaiSP":"Giay"
+        },
+        {
+            "tenSP":"NÓN LƯỠI TRAI A2NLT07214",
+            "hinh": "hinh17.jpg",
+            "gia": "800.000",
+            "loaiSP":"PhuKien"
+        },
+        {
+            "tenSP":"Nike Jordan 1 Low Shadow Toe",
+            "hinh": "hinh3.jpg",
+            "gia": "8.400.000",
+            "loaiSP":"Giay"
+        },
+        {
+            "tenSP":"NÓN BUCKET A2NBK07201",
+            "hinh": "hinh18.jpg",
+            "gia": "200.000",
+            "loaiSP":"PhuKien"
+        },
+        {
+            "tenSP":"Air Jordan High Shadow Red",
+            "hinh": "hinhgiay3.jpg",
+            "gia": "1.400.000",
+            "loaiSP":"Giay"
+        },
+        {
+            "tenSP":"TÚI XÁCH A2TXA05207",
+            "hinh": "hinh15.jpg",
+            "gia": "400.000",
+            "loaiSP":"PhuKien"
+        },
+        {
+            "tenSP":"Air Jordan High Shadow Red",
+            "hinh": "hinhgiay3.jpg",
+            "gia": "1.400.000",
+            "loaiSP":"Giay"
+        },
+        {
+            "tenSP":"TÚI XÁCH A2TXA05207",
+            "hinh": "hinh15.jpg",
+            "gia": "400.000",
+            "loaiSP":"PhuKien"
+        }
+
+    ],
+    "dataBanners": [
+        {
+            "tenBN":"banner5.jpg",
+            "LoaiBN":"bannerProducts"
+        },
+        {
+            "tenBN":"bannerSP1.webp",
+            "LoaiBN":"bannerProducts"
+        },
+        {
+            "tenBN":"bannerSP2.webp",
+            "LoaiBN":"bannerProducts"
+        },
+        {
+            "tenBN":"bannerqc.jpg",
+            "LoaiBN":"bannerPR"
+        },
+        {
+            "tenBN":"banner8.webp",
+            "LoaiBN":"bannerPR"
+        },
+        {
+            "tenBN":"bannerqc10.jpg",
+            "LoaiBN":"bannerPR"
+        }
+    ],
+    "dataThongTin": [
+        {
+            "tieuDe": "Bảo hành 3 năm",
+            "hinhTT": "hinh6.jpg",
+            "loaiTieuDe": "tieuDePhu",
+            "noiDung": "Bảo hành bảo dưỡng miễn phí trong 3 năm, Nhằm hỗ trợ khách hàng tốt nhất."
+        },
+        {
+            "tieuDe": "Cá nhân hóa sản phẩm",
+            "hinhTT": "hinh11.jpg",
+            "loaiTieuDe": "tieuDePhu",
+            "noiDung": "Với châm ngôn ''cá nhân hóa sản phẩm cho khách hàng'' từng sản phẩm được thiết kế phù"
+        },
+        {
+            "tieuDe": "Thương hiệu lớn",
+            "hinhTT": "bannerTT1.jpg",
+            "loaiTieuDe": "tieuDeChinh",
+            "noiDung": "Với nhiều chi nhánh trên toàn quốc và hợp tác với nhiều thương hiệu giày lớn. Luôn sẵn sàng phục vụ khách bất cứ nơi đâu. Với những mẫu mới nhất của các thương hiệu lớn hiện nay. Hợp tác với nhiều nhãn hàng nổi tiếng của ngành thời trang."
+        }
+    ],
+    "dataTinTuc": [
+        {
+            "tieuDe": "Thắt dây giầy phổ biến với hai cách sau",
+            "hinhTT": "hinh13.jpg",
+            "loaiTieuDe": "tieuDeChinh",
+            "noiDung": "Những tiểu tiết nhỏ sẽ thể hiện sự tinh tế của môt người đàn ông. Cách thắt dây giầy còn giúp bạn có một đội giầy đẹp hơn và thể được sự cá tính của chính bạn."
+        },
+        {
+            "tieuDe": "Chính thức ra mắt mẫu mới",
+            "hinhTT": "hinh6.jpg",
+            "loaiTieuDe": "tieuDePhu",
+            "noiDung": "Nằm trong GIBSON COLLECTION mới ra mắt. Điểm nhấn là sự khác biệt."
+        }
+    ]
+}
